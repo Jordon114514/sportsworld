@@ -1,0 +1,28 @@
+package com.tianmu.http.constant;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes6.dex */
+public class HttpConstant {
+    public static final String CIBA_RESPONSE_HEADER = "CIBA_RESPONSE_HEADER";
+    public static final String CIBA_UNZIP_KEY = "CIBA_UNZIP_KEY";
+    public static final String DEFAULT_ACCEPT = "application/json";
+    public static final String DEFAULT_CHARSET_NAME = "UTF-8";
+    public static final String DEFAULT_CONTENT_TYPE = "application/x-www-form-urlencoded";
+    public static final long DEFAULT_TIME_OUT = 5000;
+    public static final String ERROR_MESSAGE_CODE_NOT_200 = "response code not 200";
+    public static final String ERROR_MESSAGE_RESULT_EMPTY = "result data is empty";
+    public static final String ERROR_MESSAGE_UNKNOW = "unknow error";
+    public static final String GET_METHOD = "GET";
+    public static final String HTTPS = "https://";
+    public static final String JSON_CONTENT_TYPE = "application/json";
+    public static final int OTHER_CODE = -1001;
+    public static final String POST_METHOD = "POST";
+    public static final int REQUEST_EXPIRE_CODE = -1003;
+    public static final int RESPONSE_ERROR_CODE = -1002;
+    public static final String RESPONSE_HEADER = "1";
+    public static final int SECRET_KEY_ERROR_CODE = -1004;
+    public static final int SUCCESS_CODE = 200;
+    public static final int TIME_OUT_CODE = -2001;
+    public static final int TYPE_NORMAL = 0;
+    public static final int TYPE_REPORT = 1;
+    public static final String UNZLIB = "UNZLIB";
+}

@@ -1,0 +1,49 @@
+package com.tianmu.e.w;
+
+import androidx.collection.ArrayMap;
+import androidx.collection.SimpleArrayMap;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes6.dex */
+public final class b<K, V> extends ArrayMap<K, V> {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private int f20144a;
+
+    @Override // androidx.collection.SimpleArrayMap, java.util.Map
+    public void clear() {
+        this.f20144a = 0;
+        super.clear();
+    }
+
+    @Override // androidx.collection.SimpleArrayMap, java.util.Map
+    public int hashCode() {
+        if (this.f20144a == 0) {
+            this.f20144a = super.hashCode();
+        }
+        return this.f20144a;
+    }
+
+    @Override // androidx.collection.SimpleArrayMap, java.util.Map
+    public V put(K k, V v) {
+        this.f20144a = 0;
+        return (V) super.put(k, v);
+    }
+
+    @Override // androidx.collection.SimpleArrayMap
+    public void putAll(SimpleArrayMap<? extends K, ? extends V> simpleArrayMap) {
+        this.f20144a = 0;
+        super.putAll(simpleArrayMap);
+    }
+
+    @Override // androidx.collection.SimpleArrayMap
+    public V removeAt(int i) {
+        this.f20144a = 0;
+        return (V) super.removeAt(i);
+    }
+
+    @Override // androidx.collection.SimpleArrayMap
+    public V setValueAt(int i, V v) {
+        this.f20144a = 0;
+        return (V) super.setValueAt(i, v);
+    }
+}

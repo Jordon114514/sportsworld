@@ -1,0 +1,8 @@
+package com.huawei.hms.framework.network.grs;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes5.dex */
+public interface IQueryUrlCallBack {
+    void onCallBackFail(int i);
+
+    void onCallBackSuccess(String str);
+}

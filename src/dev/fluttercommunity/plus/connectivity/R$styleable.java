@@ -1,0 +1,97 @@
+package dev.fluttercommunity.plus.connectivity;
+
+import android.R;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes7.dex */
+public final class R$styleable {
+    public static int ActivityFilter_activityAction = 0;
+    public static int ActivityFilter_activityName = 1;
+    public static int ActivityRule_alwaysExpand = 0;
+    public static int ActivityRule_tag = 1;
+    public static int Capability_queryPatterns = 0;
+    public static int Capability_shortcutMatchRequired = 1;
+    public static int ColorStateListItem_alpha = 3;
+    public static int ColorStateListItem_android_alpha = 1;
+    public static int ColorStateListItem_android_color = 0;
+    public static int ColorStateListItem_android_lStar = 2;
+    public static int ColorStateListItem_lStar = 4;
+    public static int FontFamilyFont_android_font = 0;
+    public static int FontFamilyFont_android_fontStyle = 2;
+    public static int FontFamilyFont_android_fontVariationSettings = 4;
+    public static int FontFamilyFont_android_fontWeight = 1;
+    public static int FontFamilyFont_android_ttcIndex = 3;
+    public static int FontFamilyFont_font = 5;
+    public static int FontFamilyFont_fontStyle = 6;
+    public static int FontFamilyFont_fontVariationSettings = 7;
+    public static int FontFamilyFont_fontWeight = 8;
+    public static int FontFamilyFont_ttcIndex = 9;
+    public static int FontFamily_fontProviderAuthority = 0;
+    public static int FontFamily_fontProviderCerts = 1;
+    public static int FontFamily_fontProviderFetchStrategy = 2;
+    public static int FontFamily_fontProviderFetchTimeout = 3;
+    public static int FontFamily_fontProviderPackage = 4;
+    public static int FontFamily_fontProviderQuery = 5;
+    public static int FontFamily_fontProviderSystemFontFamily = 6;
+    public static int FragmentContainerView_android_name = 0;
+    public static int FragmentContainerView_android_tag = 1;
+    public static int Fragment_android_id = 1;
+    public static int Fragment_android_name = 0;
+    public static int Fragment_android_tag = 2;
+    public static int GradientColorItem_android_color = 0;
+    public static int GradientColorItem_android_offset = 1;
+    public static int GradientColor_android_centerColor = 7;
+    public static int GradientColor_android_centerX = 3;
+    public static int GradientColor_android_centerY = 4;
+    public static int GradientColor_android_endColor = 1;
+    public static int GradientColor_android_endX = 10;
+    public static int GradientColor_android_endY = 11;
+    public static int GradientColor_android_gradientRadius = 5;
+    public static int GradientColor_android_startColor = 0;
+    public static int GradientColor_android_startX = 8;
+    public static int GradientColor_android_startY = 9;
+    public static int GradientColor_android_tileMode = 6;
+    public static int GradientColor_android_type = 2;
+    public static int SplitPairFilter_primaryActivityName = 0;
+    public static int SplitPairFilter_secondaryActivityAction = 1;
+    public static int SplitPairFilter_secondaryActivityName = 2;
+    public static int SplitPairRule_animationBackgroundColor = 0;
+    public static int SplitPairRule_clearTop = 1;
+    public static int SplitPairRule_finishPrimaryWithSecondary = 2;
+    public static int SplitPairRule_finishSecondaryWithPrimary = 3;
+    public static int SplitPairRule_splitLayoutDirection = 4;
+    public static int SplitPairRule_splitMaxAspectRatioInLandscape = 5;
+    public static int SplitPairRule_splitMaxAspectRatioInPortrait = 6;
+    public static int SplitPairRule_splitMinHeightDp = 7;
+    public static int SplitPairRule_splitMinSmallestWidthDp = 8;
+    public static int SplitPairRule_splitMinWidthDp = 9;
+    public static int SplitPairRule_splitRatio = 10;
+    public static int SplitPairRule_tag = 11;
+    public static int SplitPlaceholderRule_animationBackgroundColor = 0;
+    public static int SplitPlaceholderRule_finishPrimaryWithPlaceholder = 1;
+    public static int SplitPlaceholderRule_placeholderActivityName = 2;
+    public static int SplitPlaceholderRule_splitLayoutDirection = 3;
+    public static int SplitPlaceholderRule_splitMaxAspectRatioInLandscape = 4;
+    public static int SplitPlaceholderRule_splitMaxAspectRatioInPortrait = 5;
+    public static int SplitPlaceholderRule_splitMinHeightDp = 6;
+    public static int SplitPlaceholderRule_splitMinSmallestWidthDp = 7;
+    public static int SplitPlaceholderRule_splitMinWidthDp = 8;
+    public static int SplitPlaceholderRule_splitRatio = 9;
+    public static int SplitPlaceholderRule_stickyPlaceholder = 10;
+    public static int SplitPlaceholderRule_tag = 11;
+    public static int[] ActivityFilter = {2130968615, 2130968617};
+    public static int[] ActivityRule = {2130968665, 2130970611};
+    public static int[] Capability = {2130970039, 2130970267};
+    public static int[] ColorStateListItem = {R.attr.color, R.attr.alpha, R.attr.lStar, 2130968662, 2130969599};
+    public static int[] FontFamily = {2130969283, 2130969284, 2130969285, 2130969286, 2130969287, 2130969288, 2130969289};
+    public static int[] FontFamilyFont = {R.attr.font, R.attr.fontWeight, R.attr.fontStyle, R.attr.ttcIndex, R.attr.fontVariationSettings, 2130969281, 2130969290, 2130969291, 2130969292, 2130970820};
+    public static int[] Fragment = {R.attr.name, R.attr.id, R.attr.tag};
+    public static int[] FragmentContainerView = {R.attr.name, R.attr.tag};
+    public static int[] GradientColor = {R.attr.startColor, R.attr.endColor, R.attr.type, R.attr.centerX, R.attr.centerY, R.attr.gradientRadius, R.attr.tileMode, R.attr.centerColor, R.attr.startX, R.attr.startY, R.attr.endX, R.attr.endY};
+    public static int[] GradientColorItem = {R.attr.color, R.attr.offset};
+    public static int[] SplitPairFilter = {2130970017, 2130970169, 2130970170};
+    public static int[] SplitPairRule = {2130968671, 2130968931, 2130969242, 2130969243, 2130970321, 2130970322, 2130970323, 2130970324, 2130970325, 2130970326, 2130970327, 2130970611};
+    public static int[] SplitPlaceholderRule = {2130968671, 2130969241, 2130969982, 2130970321, 2130970322, 2130970323, 2130970324, 2130970325, 2130970326, 2130970327, 2130970424, 2130970611};
+
+    private R$styleable() {
+    }
+}

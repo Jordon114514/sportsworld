@@ -1,0 +1,10 @@
+package com.byazt.hb;
+
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes3.dex */
+public interface ne<T> {
+    void yb(int i, String str, JSONObject jSONObject);
+
+    void yb(T t, long j);
+}

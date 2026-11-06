@@ -1,0 +1,64 @@
+package com.geetest.core;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes4.dex */
+public abstract /* synthetic */ class j7 {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ int[] f11682a;
+    public static final /* synthetic */ int[] b;
+
+    static {
+        int[] iArr = new int[l7.values().length];
+        b = iArr;
+        try {
+            iArr[l7.BREAK.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
+        try {
+            b[l7.SIMPLE_VALUE.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            b[l7.IEEE_754_HALF_PRECISION_FLOAT.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            b[l7.IEEE_754_SINGLE_PRECISION_FLOAT.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            b[l7.IEEE_754_DOUBLE_PRECISION_FLOAT.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            b[l7.SIMPLE_VALUE_NEXT_BYTE.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        int[] iArr2 = new int[w6.values().length];
+        f11682a = iArr2;
+        try {
+            iArr2[w6.FALSE.ordinal()] = 1;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            f11682a[w6.TRUE.ordinal()] = 2;
+        } catch (NoSuchFieldError unused8) {
+        }
+        try {
+            f11682a[w6.NULL.ordinal()] = 3;
+        } catch (NoSuchFieldError unused9) {
+        }
+        try {
+            f11682a[w6.UNDEFINED.ordinal()] = 4;
+        } catch (NoSuchFieldError unused10) {
+        }
+        try {
+            f11682a[w6.UNALLOCATED.ordinal()] = 5;
+        } catch (NoSuchFieldError unused11) {
+        }
+        try {
+            f11682a[w6.RESERVED.ordinal()] = 6;
+        } catch (NoSuchFieldError unused12) {
+        }
+    }
+}

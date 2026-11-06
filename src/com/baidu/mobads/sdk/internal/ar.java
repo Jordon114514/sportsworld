@@ -1,0 +1,89 @@
+package com.baidu.mobads.sdk.internal;
+
+import java.util.concurrent.Future;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes2.dex */
+public class ar {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private static final String f10227a = "TaskScheduler";
+    private static volatile ar d;
+    private ThreadPoolExecutor b;
+    private ScheduledThreadPoolExecutor c;
+
+    private ar() {
+        b();
+    }
+
+    public static ar a() {
+        if (d == null) {
+            synchronized (ar.class) {
+                try {
+                    if (d == null) {
+                        d = new ar();
+                    }
+                } catch (Throwable th) {
+                    throw th;
+                }
+            }
+        }
+        return d;
+    }
+
+    private void b() {
+        this.b = as.a(1, 1);
+        this.c = as.a(1);
+    }
+
+    public void a(Runnable runnable) {
+        ThreadPoolExecutor threadPoolExecutor;
+        if (runnable == null || (threadPoolExecutor = this.b) == null || threadPoolExecutor.isShutdown()) {
+            return;
+        }
+        try {
+            this.b.submit(runnable);
+        } catch (Throwable unused) {
+        }
+    }
+
+    public void a(j jVar) {
+        ThreadPoolExecutor threadPoolExecutor;
+        if (jVar == null || (threadPoolExecutor = this.b) == null || threadPoolExecutor.isShutdown()) {
+            return;
+        }
+        try {
+            jVar.a(System.currentTimeMillis());
+            ThreadPoolExecutor threadPoolExecutor2 = this.b;
+            jVar.a((Future) ((threadPoolExecutor2 == null || threadPoolExecutor2.isShutdown()) ? null : (FutureTask) this.b.submit(jVar)));
+        } catch (Throwable unused) {
+        }
+    }
+
+    public void a(j jVar, long j, TimeUnit timeUnit) {
+        ScheduledThreadPoolExecutor scheduledThreadPoolExecutor;
+        if (jVar == null || (scheduledThreadPoolExecutor = this.c) == null || scheduledThreadPoolExecutor.isShutdown()) {
+            return;
+        }
+        try {
+            jVar.a(System.currentTimeMillis());
+            jVar.a((Future) this.c.schedule(jVar, j, timeUnit));
+        } catch (Throwable unused) {
+        }
+    }
+
+    public void a(j jVar, long j, long j2, TimeUnit timeUnit) {
+        ScheduledThreadPoolExecutor scheduledThreadPoolExecutor;
+        if (jVar == null || (scheduledThreadPoolExecutor = this.c) == null || scheduledThreadPoolExecutor.isShutdown()) {
+            return;
+        }
+        try {
+            jVar.a(System.currentTimeMillis());
+            jVar.a((Future) this.c.scheduleAtFixedRate(jVar, j, j2, timeUnit));
+        } catch (Throwable unused) {
+        }
+    }
+}

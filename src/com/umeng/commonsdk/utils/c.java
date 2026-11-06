@@ -1,0 +1,94 @@
+package com.umeng.commonsdk.utils;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import java.util.Calendar;
+import java.util.Date;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes6.dex */
+public class c {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private static final String f20459a = null;
+    private static final String b = "lastReqTime";
+    private static final int c = 48;
+    private static final int d = 1;
+    private static final int e = 720;
+    private static final String f = "iss";
+    private static final String g = "sinr";
+    private static final String h = "clean";
+    private static boolean i;
+    private static int j;
+    private static Object k;
+
+    private static int a(int i2) {
+        if (i2 > e) {
+            return e;
+        }
+        if (i2 < 1) {
+            return 1;
+        }
+        return i2;
+    }
+
+    public static long b(Context context) {
+        SharedPreferences sharedPreferences = context.getApplicationContext().getSharedPreferences(f20459a, 0);
+        if (sharedPreferences != null) {
+            return sharedPreferences.getLong(b, 0L);
+        }
+        return 0L;
+    }
+
+    public static void c(Context context) {
+        SharedPreferences sharedPreferences = context.getApplicationContext().getSharedPreferences(f20459a, 0);
+        if (sharedPreferences != null) {
+            sharedPreferences.edit().putBoolean(h, true).commit();
+        }
+    }
+
+    public static void d(Context context) {
+        SharedPreferences sharedPreferences = context.getApplicationContext().getSharedPreferences(f20459a, 0);
+        if (sharedPreferences != null) {
+            sharedPreferences.edit().putBoolean(h, false).commit();
+        }
+    }
+
+    public static boolean e(Context context) {
+        SharedPreferences sharedPreferences = context.getApplicationContext().getSharedPreferences(f20459a, 0);
+        if (sharedPreferences != null) {
+            return sharedPreferences.getBoolean(h, false);
+        }
+        return false;
+    }
+
+    public static boolean a() {
+        boolean z;
+        synchronized (k) {
+            z = i;
+        }
+        return z;
+    }
+
+    public static int a(Context context) {
+        int i2;
+        synchronized (k) {
+            i2 = j;
+        }
+        return i2;
+    }
+
+    public static boolean a(long j2, long j3, int i2) {
+        Date date = new Date(j3);
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date(j2));
+        calendar.add(10, i2);
+        return date.after(calendar.getTime());
+    }
+
+    public static void a(Context context, long j2) {
+        SharedPreferences sharedPreferences = context.getApplicationContext().getSharedPreferences(f20459a, 0);
+        if (sharedPreferences != null) {
+            sharedPreferences.edit().putLong(b, j2).commit();
+        }
+    }
+}

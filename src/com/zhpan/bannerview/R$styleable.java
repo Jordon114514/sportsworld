@@ -1,0 +1,90 @@
+package com.zhpan.bannerview;
+
+import android.R;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes6.dex */
+public final class R$styleable {
+    public static int BannerViewPager_bvp_auto_play = 0;
+    public static int BannerViewPager_bvp_can_loop = 1;
+    public static int BannerViewPager_bvp_indicator_checked_color = 2;
+    public static int BannerViewPager_bvp_indicator_gravity = 3;
+    public static int BannerViewPager_bvp_indicator_normal_color = 4;
+    public static int BannerViewPager_bvp_indicator_radius = 5;
+    public static int BannerViewPager_bvp_indicator_slide_mode = 6;
+    public static int BannerViewPager_bvp_indicator_style = 7;
+    public static int BannerViewPager_bvp_indicator_visibility = 8;
+    public static int BannerViewPager_bvp_interval = 9;
+    public static int BannerViewPager_bvp_page_margin = 10;
+    public static int BannerViewPager_bvp_page_style = 11;
+    public static int BannerViewPager_bvp_reveal_width = 12;
+    public static int BannerViewPager_bvp_round_corner = 13;
+    public static int BannerViewPager_bvp_scroll_duration = 14;
+    public static int ColorStateListItem_alpha = 3;
+    public static int ColorStateListItem_android_alpha = 1;
+    public static int ColorStateListItem_android_color = 0;
+    public static int ColorStateListItem_android_lStar = 2;
+    public static int ColorStateListItem_lStar = 4;
+    public static int FontFamilyFont_android_font = 0;
+    public static int FontFamilyFont_android_fontStyle = 2;
+    public static int FontFamilyFont_android_fontVariationSettings = 4;
+    public static int FontFamilyFont_android_fontWeight = 1;
+    public static int FontFamilyFont_android_ttcIndex = 3;
+    public static int FontFamilyFont_font = 5;
+    public static int FontFamilyFont_fontStyle = 6;
+    public static int FontFamilyFont_fontVariationSettings = 7;
+    public static int FontFamilyFont_fontWeight = 8;
+    public static int FontFamilyFont_ttcIndex = 9;
+    public static int FontFamily_fontProviderAuthority = 0;
+    public static int FontFamily_fontProviderCerts = 1;
+    public static int FontFamily_fontProviderFetchStrategy = 2;
+    public static int FontFamily_fontProviderFetchTimeout = 3;
+    public static int FontFamily_fontProviderPackage = 4;
+    public static int FontFamily_fontProviderQuery = 5;
+    public static int FontFamily_fontProviderSystemFontFamily = 6;
+    public static int GradientColorItem_android_color = 0;
+    public static int GradientColorItem_android_offset = 1;
+    public static int GradientColor_android_centerColor = 7;
+    public static int GradientColor_android_centerX = 3;
+    public static int GradientColor_android_centerY = 4;
+    public static int GradientColor_android_endColor = 1;
+    public static int GradientColor_android_endX = 10;
+    public static int GradientColor_android_endY = 11;
+    public static int GradientColor_android_gradientRadius = 5;
+    public static int GradientColor_android_startColor = 0;
+    public static int GradientColor_android_startX = 8;
+    public static int GradientColor_android_startY = 9;
+    public static int GradientColor_android_tileMode = 6;
+    public static int GradientColor_android_type = 2;
+    public static int IndicatorView_vpi_orientation = 0;
+    public static int IndicatorView_vpi_rtl = 1;
+    public static int IndicatorView_vpi_slide_mode = 2;
+    public static int IndicatorView_vpi_slider_checked_color = 3;
+    public static int IndicatorView_vpi_slider_normal_color = 4;
+    public static int IndicatorView_vpi_slider_radius = 5;
+    public static int IndicatorView_vpi_style = 6;
+    public static int RecyclerView_android_clipToPadding = 1;
+    public static int RecyclerView_android_descendantFocusability = 2;
+    public static int RecyclerView_android_orientation = 0;
+    public static int RecyclerView_fastScrollEnabled = 3;
+    public static int RecyclerView_fastScrollHorizontalThumbDrawable = 4;
+    public static int RecyclerView_fastScrollHorizontalTrackDrawable = 5;
+    public static int RecyclerView_fastScrollVerticalThumbDrawable = 6;
+    public static int RecyclerView_fastScrollVerticalTrackDrawable = 7;
+    public static int RecyclerView_layoutManager = 8;
+    public static int RecyclerView_reverseLayout = 9;
+    public static int RecyclerView_spanCount = 10;
+    public static int RecyclerView_stackFromEnd = 11;
+    public static int ViewPager2_android_orientation;
+    public static int[] BannerViewPager = {2130968824, 2130968825, 2130968826, 2130968827, 2130968828, 2130968829, 2130968830, 2130968831, 2130968832, 2130968833, 2130968834, 2130968835, 2130968836, 2130968837, 2130968838};
+    public static int[] ColorStateListItem = {R.attr.color, R.attr.alpha, R.attr.lStar, 2130968662, 2130969599};
+    public static int[] FontFamily = {2130969283, 2130969284, 2130969285, 2130969286, 2130969287, 2130969288, 2130969289};
+    public static int[] FontFamilyFont = {R.attr.font, R.attr.fontWeight, R.attr.fontStyle, R.attr.ttcIndex, R.attr.fontVariationSettings, 2130969281, 2130969290, 2130969291, 2130969292, 2130970820};
+    public static int[] GradientColor = {R.attr.startColor, R.attr.endColor, R.attr.type, R.attr.centerX, R.attr.centerY, R.attr.gradientRadius, R.attr.tileMode, R.attr.centerColor, R.attr.startX, R.attr.startY, R.attr.endX, R.attr.endY};
+    public static int[] GradientColorItem = {R.attr.color, R.attr.offset};
+    public static int[] IndicatorView = {2130970864, 2130970865, 2130970866, 2130970867, 2130970868, 2130970869, 2130970870};
+    public static int[] RecyclerView = {R.attr.orientation, R.attr.clipToPadding, R.attr.descendantFocusability, 2130969236, 2130969237, 2130969238, 2130969239, 2130969240, 2130969609, 2130970065, 2130970317, 2130970401};
+    public static int[] ViewPager2 = {R.attr.orientation};
+
+    private R$styleable() {
+    }
+}

@@ -1,0 +1,6 @@
+package p210o00o0oOO;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes7.dex */
+public interface o000OO00 {
+    Object get();
+}

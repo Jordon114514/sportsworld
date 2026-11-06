@@ -1,0 +1,15 @@
+package com.zjwh.android_wh_physicalfitness.mvi.home;
+
+import android.view.View;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes7.dex */
+public final /* synthetic */ class OooOOO0 implements View.OnClickListener {
+
+    /* JADX INFO: renamed from: OooOO0o, reason: collision with root package name */
+    public final /* synthetic */ IndoorExerciseRankFragment f23812OooOO0o;
+
+    @Override // android.view.View.OnClickListener
+    public final void onClick(View view) {
+        IndoorExerciseRankFragment.OooOO0O(this.f23812OooOO0o, view);
+    }
+}

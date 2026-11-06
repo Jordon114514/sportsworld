@@ -1,0 +1,272 @@
+package com.tianmu.e.q;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import com.yfanads.android.adx.thirdpart.filedownload.model.FileDownloadStatus;
+import java.nio.BufferUnderflowException;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.util.Arrays;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes6.dex */
+public class d {
+    private ByteBuffer b;
+    private c c;
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private final byte[] f19902a = new byte[256];
+    private int d = 0;
+
+    private boolean c() {
+        return this.c.b != 0;
+    }
+
+    private int d() {
+        try {
+            return this.b.get() & FileDownloadStatus.error;
+        } catch (Exception unused) {
+            this.c.b = 1;
+            return 0;
+        }
+    }
+
+    private void e() {
+        this.c.d.f19900a = l();
+        this.c.d.b = l();
+        this.c.d.c = l();
+        this.c.d.d = l();
+        int iD = d();
+        boolean z = (iD & 128) != 0;
+        int iPow = (int) Math.pow(2.0d, (iD & 7) + 1);
+        b bVar = this.c.d;
+        bVar.e = (iD & 64) != 0;
+        if (z) {
+            bVar.k = a(iPow);
+        } else {
+            bVar.k = null;
+        }
+        this.c.d.j = this.b.position();
+        o();
+        if (c()) {
+            return;
+        }
+        c cVar = this.c;
+        cVar.c++;
+        cVar.e.add(cVar.d);
+    }
+
+    /*  JADX ERROR: Method load error
+        jadx.core.utils.exceptions.DecodeException: Load method exception: JadxRuntimeException: Failed to decode insn: 0x0036: CONST_STRING r0 in method: com.tianmu.e.q.d.f():void, file: D:\schoolrun\_rev\dex_final\classes6.dex
+        	at jadx.core.dex.nodes.MethodNode.load(MethodNode.java:186)
+        	at jadx.core.dex.nodes.ClassNode.load(ClassNode.java:462)
+        	at jadx.core.ProcessClass.process(ProcessClass.java:78)
+        	at jadx.core.ProcessClass.generateCode(ProcessClass.java:127)
+        	at jadx.core.dex.nodes.ClassNode.generateClassCode(ClassNode.java:405)
+        	at jadx.core.dex.nodes.ClassNode.decompile(ClassNode.java:393)
+        	at jadx.core.dex.nodes.ClassNode.getCode(ClassNode.java:343)
+        Caused by: jadx.core.utils.exceptions.JadxRuntimeException: Failed to decode insn: 0x0036: CONST_STRING r0
+        	at jadx.core.dex.instructions.InsnDecoder.lambda$process$0(InsnDecoder.java:57)
+        	at jadx.plugins.input.dex.sections.DexCodeReader.visitInstructions(DexCodeReader.java:86)
+        	at jadx.core.dex.instructions.InsnDecoder.process(InsnDecoder.java:46)
+        	at jadx.core.dex.nodes.MethodNode.load(MethodNode.java:175)
+        	... 6 more
+        Caused by: java.lang.IllegalArgumentException: newPosition > limit: (1962317553 > 9819880)
+        	at java.base/java.nio.Buffer.createPositionException(Buffer.java:351)
+        	at java.base/java.nio.Buffer.position(Buffer.java:326)
+        	at java.base/java.nio.ByteBuffer.position(ByteBuffer.java:1561)
+        	at jadx.plugins.input.dex.sections.SectionReader.absPos(SectionReader.java:82)
+        	at jadx.plugins.input.dex.sections.SectionReader.getString(SectionReader.java:177)
+        	at jadx.plugins.input.dex.insns.DexInsnData.getIndexAsString(DexInsnData.java:121)
+        	at jadx.core.dex.instructions.InsnDecoder.decode(InsnDecoder.java:86)
+        	at jadx.core.dex.instructions.InsnDecoder.lambda$process$0(InsnDecoder.java:51)
+        	... 9 more
+        */
+    private void f() {
+        /*
+        // Can't load method instructions: Load method exception: JadxRuntimeException: Failed to decode insn: 0x0036: CONST_STRING r0 in method: com.tianmu.e.q.d.f():void, file: D:\schoolrun\_rev\dex_final\classes6.dex
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.tianmu.e.q.d.f():void");
+    }
+
+    private void g() {
+        b(Integer.MAX_VALUE);
+    }
+
+    private void h() {
+        d();
+        int iD = d();
+        b bVar = this.c.d;
+        int i = (iD & 28) >> 2;
+        bVar.g = i;
+        if (i == 0) {
+            bVar.g = 1;
+        }
+        bVar.f = (iD & 1) != 0;
+        int iL = l();
+        if (iL < 2) {
+            iL = 10;
+        }
+        b bVar2 = this.c.d;
+        bVar2.i = iL * 10;
+        bVar2.h = d();
+        d();
+    }
+
+    private void i() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 6; i++) {
+            sb.append((char) d());
+        }
+        if (!sb.toString().startsWith("GIF")) {
+            this.c.b = 1;
+            return;
+        }
+        j();
+        if (!this.c.h || c()) {
+            return;
+        }
+        c cVar = this.c;
+        cVar.f19901a = a(cVar.i);
+        c cVar2 = this.c;
+        cVar2.l = cVar2.f19901a[cVar2.j];
+    }
+
+    private void j() {
+        this.c.f = l();
+        this.c.g = l();
+        int iD = d();
+        c cVar = this.c;
+        cVar.h = (iD & 128) != 0;
+        cVar.i = (int) Math.pow(2.0d, (iD & 7) + 1);
+        this.c.j = d();
+        this.c.k = d();
+    }
+
+    private void k() {
+        do {
+            f();
+            byte[] bArr = this.f19902a;
+            if (bArr[0] == 1) {
+                byte b = bArr[1];
+                byte b2 = bArr[2];
+                this.c.m = ((b2 & FileDownloadStatus.error) << 8) | (b & FileDownloadStatus.error);
+            }
+            if (this.d <= 0) {
+                return;
+            }
+        } while (!c());
+    }
+
+    private int l() {
+        return this.b.getShort();
+    }
+
+    private void m() {
+        this.b = null;
+        Arrays.fill(this.f19902a, (byte) 0);
+        this.c = new c();
+        this.d = 0;
+    }
+
+    private void n() {
+        int iD;
+        do {
+            iD = d();
+            this.b.position(Math.min(this.b.position() + iD, this.b.limit()));
+        } while (iD > 0);
+    }
+
+    private void o() {
+        d();
+        n();
+    }
+
+    public d a(@NonNull ByteBuffer byteBuffer) {
+        m();
+        ByteBuffer byteBufferAsReadOnlyBuffer = byteBuffer.asReadOnlyBuffer();
+        this.b = byteBufferAsReadOnlyBuffer;
+        byteBufferAsReadOnlyBuffer.position(0);
+        this.b.order(ByteOrder.LITTLE_ENDIAN);
+        return this;
+    }
+
+    @NonNull
+    public c b() {
+        if (this.b == null) {
+            throw new IllegalStateException("You must call setData() before parseHeader()");
+        }
+        if (!c()) {
+            i();
+            if (!c()) {
+                g();
+                c cVar = this.c;
+                if (cVar.c < 0) {
+                    cVar.b = 1;
+                }
+            }
+        }
+        return this.c;
+    }
+
+    private void b(int i) {
+        boolean z = false;
+        while (!z && !c() && this.c.c <= i) {
+            int iD = d();
+            if (iD == 33) {
+                int iD2 = d();
+                if (iD2 != 1) {
+                    if (iD2 == 249) {
+                        this.c.d = new b();
+                        h();
+                    } else if (iD2 != 254 && iD2 == 255) {
+                        f();
+                        StringBuilder sb = new StringBuilder();
+                        for (int i2 = 0; i2 < 11; i2++) {
+                            sb.append((char) this.f19902a[i2]);
+                        }
+                        if (sb.toString().equals("NETSCAPE2.0")) {
+                            k();
+                        }
+                    }
+                }
+                n();
+            } else if (iD == 44) {
+                c cVar = this.c;
+                if (cVar.d == null) {
+                    cVar.d = new b();
+                }
+                e();
+            } else if (iD != 59) {
+                this.c.b = 1;
+            } else {
+                z = true;
+            }
+        }
+    }
+
+    public void a() {
+        this.b = null;
+        this.c = null;
+    }
+
+    @Nullable
+    private int[] a(int i) {
+        byte[] bArr = new byte[i * 3];
+        try {
+            this.b.get(bArr);
+            int[] iArr = new int[256];
+            int i2 = 0;
+            for (int i3 = 0; i3 < i; i3++) {
+                byte b = bArr[i2];
+                int i4 = i2 + 2;
+                byte b2 = bArr[i2 + 1];
+                i2 += 3;
+                iArr[i3] = ((b2 & FileDownloadStatus.error) << 8) | ((b & FileDownloadStatus.error) << 16) | (-16777216) | (bArr[i4] & FileDownloadStatus.error);
+            }
+            return iArr;
+        } catch (BufferUnderflowException unused) {
+            this.c.b = 1;
+            return null;
+        }
+    }
+}

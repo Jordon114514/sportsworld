@@ -1,0 +1,63 @@
+package com.byazt.ovh;
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.util.TypedValue;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import com.byazt.aue.LayoutVideoDetail;
+import com.byazt.ft.m;
+import com.byazt.ipr.hu;
+import com.byazt.ipr.l;
+import com.byazt.ipr.tn;
+import com.byazt.ofd.kv;
+import com.byazt.ohi.TTProgressBar;
+import com.bykv.vk.component.ttvideo.player.MediaPlayer;
+import java.util.EnumSet;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes3.dex */
+@com.byazt.zs.yb(yb = {0, 1, MediaPlayer.MEDIA_PLAYER_OPTION_VIDEO_DECODER_POST_STALL_500, 39})
+public class yb extends hu {
+    public yb(Context context, ViewGroup viewGroup, m mVar, String str, boolean z, boolean z2, boolean z3) {
+        super(context, viewGroup, mVar, str, z, z2, z3);
+    }
+
+    @Override // com.byazt.ipr.hu
+    public l yb(Context context, EnumSet<com.byazt.azl.ne.yb> enumSet) {
+        View viewYb = this.st ? yb(context) : new LayoutVideoDetail(context);
+        if (viewYb == null) {
+            return null;
+        }
+        return this.st ? new l(context, viewYb, true, enumSet, this.l, this, fl(), null) : new tn(context, viewYb, true, enumSet, this.l, this, false);
+    }
+
+    private View yb(final Context context) {
+        Resources resources = context.getResources();
+        RelativeLayout relativeLayout = new RelativeLayout(context);
+        relativeLayout.setId(2114387714);
+        relativeLayout.setBackgroundColor(-16777216);
+        RelativeLayout relativeLayout2 = new RelativeLayout(context);
+        ViewGroup.LayoutParams layoutParams = new RelativeLayout.LayoutParams(-1, -1);
+        relativeLayout2.setId(2114387900);
+        relativeLayout2.setBackgroundColor(0);
+        relativeLayout2.setGravity(17);
+        relativeLayout2.setLayoutParams(layoutParams);
+        relativeLayout.addView(relativeLayout2);
+        final TTProgressBar tTProgressBar = new TTProgressBar(context);
+        RelativeLayout.LayoutParams layoutParams2 = new RelativeLayout.LayoutParams((int) TypedValue.applyDimension(1, 60.0f, resources.getDisplayMetrics()), (int) TypedValue.applyDimension(1, 60.0f, resources.getDisplayMetrics()));
+        tTProgressBar.setId(2114387631);
+        layoutParams2.addRule(13, -1);
+        tTProgressBar.setLayoutParams(layoutParams2);
+        kv.yb(context, "tt_normalscreen_loading", new com.byazt.ybk.yb<Bitmap>() { // from class: com.byazt.ovh.yb.1
+            @Override // com.byazt.ybk.yb
+            public void yb(Bitmap bitmap) {
+                tTProgressBar.setIndeterminateDrawable(TTProgressBar.yb(context, new BitmapDrawable(context.getResources(), bitmap), 0, 360, 0.5f, 0.5f));
+            }
+        }, 320);
+        relativeLayout2.addView(tTProgressBar);
+        return relativeLayout;
+    }
+}

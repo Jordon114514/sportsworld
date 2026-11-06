@@ -1,0 +1,13 @@
+package com.zjwh.android_wh_physicalfitness.mvi.run;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes7.dex */
+public final /* synthetic */ class OooOo00 implements Runnable {
+
+    /* JADX INFO: renamed from: OooOO0o, reason: collision with root package name */
+    public final /* synthetic */ CreditRunActivity f24632OooOO0o;
+
+    @Override // java.lang.Runnable
+    public final void run() {
+        CreditRunActivity.Oooo0OO(this.f24632OooOO0o);
+    }
+}

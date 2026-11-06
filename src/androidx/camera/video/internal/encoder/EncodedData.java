@@ -1,0 +1,26 @@
+package androidx.camera.video.internal.encoder;
+
+import android.media.MediaCodec;
+import androidx.annotation.NonNull;
+import java.nio.ByteBuffer;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes1.dex */
+public interface EncodedData extends AutoCloseable {
+    @Override // java.lang.AutoCloseable
+    void close();
+
+    @NonNull
+    MediaCodec.BufferInfo getBufferInfo();
+
+    @NonNull
+    ByteBuffer getByteBuffer();
+
+    @NonNull
+    com.google.common.util.concurrent.Oooo0 getClosedFuture();
+
+    long getPresentationTimeUs();
+
+    boolean isKeyFrame();
+
+    long size();
+}

@@ -1,0 +1,46 @@
+package com.geetest.core;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes4.dex */
+public enum q5 {
+    UNSIGNED_INTEGER(0),
+    NEGATIVE_INTEGER(1),
+    BYTE_STRING(2),
+    UNICODE_STRING(3),
+    ARRAY(4),
+    MAP(5),
+    TAG(6),
+    SPECIAL(7);
+
+    private final int value;
+
+    q5(int i) {
+        this.value = i;
+    }
+
+    public static q5 ofByte(int i) throws r1 {
+        switch (i >> 5) {
+            case 0:
+                return UNSIGNED_INTEGER;
+            case 1:
+                return NEGATIVE_INTEGER;
+            case 2:
+                return BYTE_STRING;
+            case 3:
+                return UNICODE_STRING;
+            case 4:
+                return ARRAY;
+            case 5:
+                return MAP;
+            case 6:
+                return TAG;
+            case 7:
+                return SPECIAL;
+            default:
+                throw new r1("Not implemented major type " + i);
+        }
+    }
+
+    public int getValue() {
+        return this.value;
+    }
+}

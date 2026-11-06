@@ -1,0 +1,21 @@
+{
+  "total_java_files": 37224,
+  "syntactically_clean": 28362,
+  "needs_repair": 8862,
+  "jdk_only_candidates": 8484,
+  "uncompilable_enum_bodies": 88,
+  "excluded_after_iteration": 320,
+  "business_total": 2803,
+  "business_clean": 2574,
+  "javac_single_file_test": {
+    "compiled_ok": 70,
+    "failed": 50,
+    "sample": 120,
+    "class_files": 70
+  },
+  "javac_batch_test": {
+    "candidates": 8484,
+    "syntax_pass": 8420,
+    "pass_rate_pct": 99.24
+  }
+}

@@ -1,0 +1,58 @@
+package com.amap.api.navi;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes2.dex */
+public final class R$styleable {
+    public static final int NightMode_dayModeBackGround = 1;
+    public static final int NightMode_dayModeMarkBackGround = 8;
+    public static final int NightMode_dayModeSrc = 5;
+    public static final int NightMode_dayModeTextColor = 3;
+    public static final int NightMode_markText = 6;
+    public static final int NightMode_nightModeBackGround = 0;
+    public static final int NightMode_nightModeMarkBackGround = 7;
+    public static final int NightMode_nightModeSrc = 4;
+    public static final int NightMode_nightModeTextColor = 2;
+    public static final int amap_navi_SlidingUpPanelLayout_umanoAnchorPoint = 9;
+    public static final int amap_navi_SlidingUpPanelLayout_umanoClipPanel = 8;
+    public static final int amap_navi_SlidingUpPanelLayout_umanoDragView = 5;
+    public static final int amap_navi_SlidingUpPanelLayout_umanoFadeColor = 3;
+    public static final int amap_navi_SlidingUpPanelLayout_umanoFlingVelocity = 4;
+    public static final int amap_navi_SlidingUpPanelLayout_umanoInitialState = 10;
+    public static final int amap_navi_SlidingUpPanelLayout_umanoOverlay = 7;
+    public static final int amap_navi_SlidingUpPanelLayout_umanoPanelHeight = 0;
+    public static final int amap_navi_SlidingUpPanelLayout_umanoParallaxOffset = 2;
+    public static final int amap_navi_SlidingUpPanelLayout_umanoScrollInterpolator = 11;
+    public static final int amap_navi_SlidingUpPanelLayout_umanoScrollableView = 6;
+    public static final int amap_navi_SlidingUpPanelLayout_umanoShadowHeight = 1;
+    public static final int amap_navi_broadcast_amap_navi_color_bg_rbtn_broadcastSetting_center = 2;
+    public static final int amap_navi_broadcast_amap_navi_color_bg_rbtn_broadcastSetting_left = 1;
+    public static final int amap_navi_broadcast_amap_navi_color_bg_rbtn_broadcastSetting_right = 3;
+    public static final int amap_navi_broadcast_amap_navi_color_text_broadcastSetting = 0;
+    public static final int amap_navi_broadcast_amap_navi_color_text_rbtn_broadcastSetting = 4;
+    public static final int amap_navi_chooserouteline_amap_navi_color_bg_line_tab = 0;
+    public static final int amap_navi_chooserouteline_amap_navi_color_bg_line_tab_pressed = 1;
+    public static final int amap_navi_chooserouteline_amap_navi_color_bg_line_tab_titleview = 2;
+    public static final int amap_navi_chooserouteline_amap_navi_color_bg_line_tab_titleview_pressed = 3;
+    public static final int amap_navi_chooserouteline_amap_navi_color_text_line_tab_distance = 8;
+    public static final int amap_navi_chooserouteline_amap_navi_color_text_line_tab_distance_pressed = 9;
+    public static final int amap_navi_chooserouteline_amap_navi_color_text_line_tab_time = 6;
+    public static final int amap_navi_chooserouteline_amap_navi_color_text_line_tab_time_pressed = 7;
+    public static final int amap_navi_chooserouteline_amap_navi_color_text_line_tab_title = 4;
+    public static final int amap_navi_chooserouteline_amap_navi_color_text_line_tab_title_pressed = 5;
+    public static final int amap_navi_strategy_amap_navi_color_bg_strategy_tab = 0;
+    public static final int amap_navi_strategy_amap_navi_color_bg_strategy_tab_pressed = 1;
+    public static final int amap_navi_strategy_amap_navi_color_text_strategy_tab = 2;
+    public static final int amap_navi_strategy_amap_navi_color_text_strategy_tab_pressed = 3;
+    public static final int amap_navi_strategy_amap_navi_img_icon_strategy_tab_avoid_fee = 6;
+    public static final int amap_navi_strategy_amap_navi_img_icon_strategy_tab_avoid_fee_pressed = 7;
+    public static final int amap_navi_strategy_amap_navi_img_icon_strategy_tab_avoid_highway = 8;
+    public static final int amap_navi_strategy_amap_navi_img_icon_strategy_tab_avoid_highway_pressed = 9;
+    public static final int amap_navi_strategy_amap_navi_img_icon_strategy_tab_avoid_jam = 4;
+    public static final int amap_navi_strategy_amap_navi_img_icon_strategy_tab_avoid_jam_pressed = 5;
+    public static final int amap_navi_strategy_amap_navi_img_icon_strategy_tab_highway_preferred = 10;
+    public static final int amap_navi_strategy_amap_navi_img_icon_strategy_tab_highway_preferred_pressed = 11;
+    public static final int[] NightMode = {R$attr.nightModeBackGround, R$attr.dayModeBackGround, R$attr.nightModeTextColor, R$attr.dayModeTextColor, R$attr.nightModeSrc, R$attr.dayModeSrc, R$attr.markText, R$attr.nightModeMarkBackGround, R$attr.dayModeMarkBackGround};
+    public static final int[] amap_navi_SlidingUpPanelLayout = {R$attr.umanoPanelHeight, R$attr.umanoShadowHeight, R$attr.umanoParallaxOffset, R$attr.umanoFadeColor, R$attr.umanoFlingVelocity, R$attr.umanoDragView, R$attr.umanoScrollableView, R$attr.umanoOverlay, R$attr.umanoClipPanel, R$attr.umanoAnchorPoint, R$attr.umanoInitialState, R$attr.umanoScrollInterpolator};
+    public static final int[] amap_navi_broadcast = {R$attr.amap_navi_color_text_broadcastSetting, R$attr.amap_navi_color_bg_rbtn_broadcastSetting_left, R$attr.amap_navi_color_bg_rbtn_broadcastSetting_center, R$attr.amap_navi_color_bg_rbtn_broadcastSetting_right, R$attr.amap_navi_color_text_rbtn_broadcastSetting};
+    public static final int[] amap_navi_chooserouteline = {R$attr.amap_navi_color_bg_line_tab, R$attr.amap_navi_color_bg_line_tab_pressed, R$attr.amap_navi_color_bg_line_tab_titleview, R$attr.amap_navi_color_bg_line_tab_titleview_pressed, R$attr.amap_navi_color_text_line_tab_title, R$attr.amap_navi_color_text_line_tab_title_pressed, R$attr.amap_navi_color_text_line_tab_time, R$attr.amap_navi_color_text_line_tab_time_pressed, R$attr.amap_navi_color_text_line_tab_distance, R$attr.amap_navi_color_text_line_tab_distance_pressed};
+    public static final int[] amap_navi_strategy = {R$attr.amap_navi_color_bg_strategy_tab, R$attr.amap_navi_color_bg_strategy_tab_pressed, R$attr.amap_navi_color_text_strategy_tab, R$attr.amap_navi_color_text_strategy_tab_pressed, R$attr.amap_navi_img_icon_strategy_tab_avoid_jam, R$attr.amap_navi_img_icon_strategy_tab_avoid_jam_pressed, R$attr.amap_navi_img_icon_strategy_tab_avoid_fee, R$attr.amap_navi_img_icon_strategy_tab_avoid_fee_pressed, R$attr.amap_navi_img_icon_strategy_tab_avoid_highway, R$attr.amap_navi_img_icon_strategy_tab_avoid_highway_pressed, R$attr.amap_navi_img_icon_strategy_tab_highway_preferred, R$attr.amap_navi_img_icon_strategy_tab_highway_preferred_pressed};
+}

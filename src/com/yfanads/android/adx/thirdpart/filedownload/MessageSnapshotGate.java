@@ -1,0 +1,89 @@
+package com.yfanads.android.adx.thirdpart.filedownload;
+
+import com.yfanads.android.adx.thirdpart.filedownload.message.MessageSnapshot;
+import com.yfanads.android.adx.thirdpart.filedownload.message.MessageSnapshotFlow;
+import com.yfanads.android.adx.thirdpart.filedownload.util.FileDownloadLog;
+import java.util.List;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes6.dex */
+public class MessageSnapshotGate implements MessageSnapshotFlow.MessageReceiver {
+    private boolean transmitMessage(List<BaseDownloadTask.IRunningTask> list, MessageSnapshot messageSnapshot) {
+        boolean zUpdateKeepAhead;
+        if (list.size() > 1 && messageSnapshot.getStatus() == -3) {
+            for (BaseDownloadTask.IRunningTask iRunningTask : list) {
+                synchronized (iRunningTask.getPauseLock()) {
+                    try {
+                        if (iRunningTask.getMessageHandler().updateMoreLikelyCompleted(messageSnapshot)) {
+                            FileDownloadLog.d(this, "updateMoreLikelyCompleted", new Object[0]);
+                            return true;
+                        }
+                    } catch (Throwable th) {
+                        throw th;
+                    }
+                }
+            }
+        }
+        for (BaseDownloadTask.IRunningTask iRunningTask2 : list) {
+            synchronized (iRunningTask2.getPauseLock()) {
+                try {
+                    if (iRunningTask2.getMessageHandler().updateKeepFlow(messageSnapshot)) {
+                        FileDownloadLog.d(this, "updateKeepFlow", new Object[0]);
+                        return true;
+                    }
+                } catch (Throwable th2) {
+                    throw th2;
+                }
+            }
+        }
+        if (-4 == messageSnapshot.getStatus()) {
+            for (BaseDownloadTask.IRunningTask iRunningTask3 : list) {
+                synchronized (iRunningTask3.getPauseLock()) {
+                    try {
+                        if (iRunningTask3.getMessageHandler().updateSameFilePathTaskRunning(messageSnapshot)) {
+                            FileDownloadLog.d(this, "updateSampleFilePathTaskRunning", new Object[0]);
+                            return true;
+                        }
+                    } catch (Throwable th3) {
+                        throw th3;
+                    }
+                }
+            }
+        }
+        if (list.size() != 1) {
+            return false;
+        }
+        BaseDownloadTask.IRunningTask iRunningTask4 = list.get(0);
+        synchronized (iRunningTask4.getPauseLock()) {
+            FileDownloadLog.d(this, "updateKeepAhead", new Object[0]);
+            zUpdateKeepAhead = iRunningTask4.getMessageHandler().updateKeepAhead(messageSnapshot);
+        }
+        return zUpdateKeepAhead;
+    }
+
+    @Override // com.yfanads.android.adx.thirdpart.filedownload.message.MessageSnapshotFlow.MessageReceiver
+    public void receive(MessageSnapshot messageSnapshot) {
+        synchronized (Integer.toString(messageSnapshot.getId()).intern()) {
+            try {
+                List<BaseDownloadTask.IRunningTask> receiveServiceTaskList = FileDownloadList.getImpl().getReceiveServiceTaskList(messageSnapshot.getId());
+                if (receiveServiceTaskList.size() > 0) {
+                    BaseDownloadTask origin = receiveServiceTaskList.get(0).getOrigin();
+                    if (FileDownloadLog.NEED_LOG) {
+                        FileDownloadLog.d(this, "~~~callback %s old[%s] new[%s] %d", Integer.valueOf(messageSnapshot.getId()), Byte.valueOf(origin.getStatus()), Byte.valueOf(messageSnapshot.getStatus()), Integer.valueOf(receiveServiceTaskList.size()));
+                    }
+                    if (!transmitMessage(receiveServiceTaskList, messageSnapshot)) {
+                        StringBuilder sb = new StringBuilder("The event isn't consumed, id:" + messageSnapshot.getId() + " status:" + ((int) messageSnapshot.getStatus()) + " task-count:" + receiveServiceTaskList.size());
+                        for (BaseDownloadTask.IRunningTask iRunningTask : receiveServiceTaskList) {
+                            sb.append(" | ");
+                            sb.append((int) iRunningTask.getOrigin().getStatus());
+                        }
+                        FileDownloadLog.i(this, sb.toString(), new Object[0]);
+                    }
+                } else {
+                    FileDownloadLog.i(this, "Receive the event %d, but there isn't any running task in the upper layer", Byte.valueOf(messageSnapshot.getStatus()));
+                }
+            } catch (Throwable th) {
+                throw th;
+            }
+        }
+    }
+}

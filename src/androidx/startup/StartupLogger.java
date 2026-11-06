@@ -1,0 +1,26 @@
+package androidx.startup;
+
+import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RestrictTo;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes1.dex */
+@RestrictTo({RestrictTo.Scope.LIBRARY})
+public final class StartupLogger {
+    static final boolean DEBUG = false;
+    private static final String TAG = "StartupLogger";
+
+    private StartupLogger() {
+    }
+
+    public static void e(@NonNull String str, @Nullable Throwable th) {
+        Log.e(TAG, str, th);
+    }
+
+    public static void i(@NonNull String str) {
+    }
+
+    public static void w(@NonNull String str) {
+    }
+}

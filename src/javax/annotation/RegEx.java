@@ -1,0 +1,21 @@
+package javax.annotation;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import javax.annotation.meta.TypeQualifierNickname;
+import javax.annotation.meta.TypeQualifierValidator;
+import javax.annotation.meta.When;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes7.dex */
+@Syntax("RegEx")
+@TypeQualifierNickname
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+public @interface RegEx {
+
+    public static class Checker implements TypeQualifierValidator<RegEx> {
+    }
+
+    When when() default When.ALWAYS;
+}

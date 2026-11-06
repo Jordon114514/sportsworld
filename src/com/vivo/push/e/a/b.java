@@ -1,0 +1,50 @@
+package com.vivo.push.e.a;
+
+import android.text.TextUtils;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import org.json.JSONException;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes6.dex */
+public final class b implements com.vivo.push.restructure.request.a.a.b {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final com.vivo.push.restructure.request.a.a.b.a<b> f20664a = new c();
+    private String b;
+    private List<com.vivo.push.e.b> c;
+    private int d;
+
+    public b(com.vivo.push.restructure.request.a.a.a aVar) throws JSONException {
+        this.c = new ArrayList();
+        this.b = aVar.c();
+        this.d = aVar.a();
+        aVar.a(com.vivo.push.e.b.f20665a, this.c);
+    }
+
+    public final List<String> a() {
+        ArrayList arrayList = new ArrayList();
+        Iterator<com.vivo.push.e.b> it = this.c.iterator();
+        while (it.hasNext()) {
+            String strB = it.next().b();
+            if (!TextUtils.isEmpty(strB)) {
+                arrayList.add(strB);
+            }
+        }
+        return arrayList;
+    }
+
+    public b(String str, List<com.vivo.push.e.b> list, int i) {
+        new ArrayList();
+        this.b = str;
+        this.d = i;
+        this.c = list;
+    }
+
+    @Override // com.vivo.push.restructure.request.a.a.b
+    public final void a(com.vivo.push.restructure.request.a.a.a aVar) {
+        aVar.a(this.b);
+        aVar.a(this.d);
+        aVar.a(this.c);
+    }
+}

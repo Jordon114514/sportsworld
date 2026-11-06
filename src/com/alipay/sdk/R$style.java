@@ -1,0 +1,15 @@
+package com.alipay.sdk;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes2.dex */
+public final class R$style {
+    public static int TextAppearance_Compat_Notification = 2132017757;
+    public static int TextAppearance_Compat_Notification_Info = 2132017758;
+    public static int TextAppearance_Compat_Notification_Line2 = 2132017760;
+    public static int TextAppearance_Compat_Notification_Time = 2132017763;
+    public static int TextAppearance_Compat_Notification_Title = 2132017765;
+    public static int Widget_Compat_NotificationActionContainer = 2132018151;
+    public static int Widget_Compat_NotificationActionText = 2132018152;
+
+    private R$style() {
+    }
+}

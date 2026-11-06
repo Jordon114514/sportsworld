@@ -1,0 +1,39 @@
+package com.fasterxml.jackson.core.util;
+
+import com.fasterxml.jackson.core.Version;
+import java.util.regex.Pattern;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes4.dex */
+public abstract class OooOo00 {
+
+    /* JADX INFO: renamed from: OooO00o, reason: collision with root package name */
+    public static final Pattern f11031OooO00o = Pattern.compile("[-_./;:]");
+
+    public static Version OooO00o(String str, String str2, String str3) {
+        if (str != null) {
+            String strTrim = str.trim();
+            if (strTrim.length() > 0) {
+                String[] strArrSplit = f11031OooO00o.split(strTrim);
+                return new Version(OooO0O0(strArrSplit[0]), strArrSplit.length > 1 ? OooO0O0(strArrSplit[1]) : 0, strArrSplit.length > 2 ? OooO0O0(strArrSplit[2]) : 0, strArrSplit.length > 3 ? strArrSplit[3] : null, str2, str3);
+            }
+        }
+        return Version.unknownVersion();
+    }
+
+    public static int OooO0O0(String str) {
+        int length = str.length();
+        int i = 0;
+        for (int i2 = 0; i2 < length; i2++) {
+            char cCharAt = str.charAt(i2);
+            if (cCharAt > '9' || cCharAt < '0') {
+                break;
+            }
+            i = (i * 10) + (cCharAt - '0');
+        }
+        return i;
+    }
+
+    public static final void OooO0OO() {
+        throw new RuntimeException("Internal error: this code path should never get executed");
+    }
+}

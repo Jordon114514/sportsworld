@@ -1,0 +1,18 @@
+package com.byazt.uf;
+
+import com.byazt.it.ATSKeep;
+import com.bykv.vk.component.ttvideo.player.MediaPlayer;
+import java.util.function.Function;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes3.dex */
+@com.byazt.zs.yb(yb = {0, 1, MediaPlayer.MEDIA_PLAYER_OPTION_ENABLE_PTS_SYNCED_SEI_NOTIFICATION, 72})
+@ATSKeep
+public class hu extends ne implements v, Function {
+    public hu(v vVar) {
+        super(vVar);
+    }
+
+    public hu(Function function) {
+        super(function);
+    }
+}

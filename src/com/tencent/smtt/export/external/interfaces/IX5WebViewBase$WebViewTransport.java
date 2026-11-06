@@ -1,0 +1,14 @@
+package com.tencent.smtt.export.external.interfaces;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes5.dex */
+public class IX5WebViewBase$WebViewTransport {
+    private IX5WebViewBase mWebview;
+
+    public synchronized IX5WebViewBase getWebView() {
+        return this.mWebview;
+    }
+
+    public synchronized void setWebView(IX5WebViewBase iX5WebViewBase) {
+        this.mWebview = iX5WebViewBase;
+    }
+}

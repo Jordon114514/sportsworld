@@ -1,0 +1,21 @@
+package com.alibaba.fastjson.serializer;
+
+import java.io.IOException;
+import java.lang.reflect.Type;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes2.dex */
+public class ByteArraySerializer implements ObjectSerializer {
+    public static ByteArraySerializer instance = new ByteArraySerializer();
+
+    @Override // com.alibaba.fastjson.serializer.ObjectSerializer
+    public final void write(JSONSerializer jSONSerializer, Object obj, Object obj2, Type type, int i) throws IOException {
+        SerializeWriter writer = jSONSerializer.getWriter();
+        if (obj != null) {
+            writer.writeByteArray((byte[]) obj);
+        } else if (writer.isEnabled(SerializerFeature.WriteNullListAsEmpty)) {
+            writer.write("[]");
+        } else {
+            writer.writeNull();
+        }
+    }
+}

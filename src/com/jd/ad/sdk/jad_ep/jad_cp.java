@@ -1,0 +1,16 @@
+package com.jd.ad.sdk.jad_ep;
+
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes5.dex */
+public final class jad_cp {
+    public static final ScheduledThreadPoolExecutor jad_an;
+
+    static {
+        ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1);
+        jad_an = scheduledThreadPoolExecutor;
+        scheduledThreadPoolExecutor.setKeepAliveTime(30L, TimeUnit.SECONDS);
+        scheduledThreadPoolExecutor.setRejectedExecutionHandler(new jad_an("video"));
+    }
+}

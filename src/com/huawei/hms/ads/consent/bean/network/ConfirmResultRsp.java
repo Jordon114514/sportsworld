@@ -1,0 +1,20 @@
+package com.huawei.hms.ads.consent.bean.network;
+
+import com.huawei.hms.ads.annotation.AllApi;
+import com.huawei.openalliance.ad.annotations.DataKeep;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes5.dex */
+@DataKeep
+public class ConfirmResultRsp {
+    private int retcode = -1;
+
+    @AllApi
+    public int getRetcode() {
+        return this.retcode;
+    }
+
+    @AllApi
+    public void setRetcode(int i) {
+        this.retcode = i;
+    }
+}

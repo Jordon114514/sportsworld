@@ -1,0 +1,39 @@
+package com.scwang.smart.refresh.header.two.level;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes5.dex */
+public final class R$attr {
+    public static int srlAccentColor = 2130970336;
+    public static int srlBottomPullUpToCloseRate = 2130970337;
+    public static int srlClassicsSpinnerStyle = 2130970338;
+    public static int srlDrawableArrow = 2130970342;
+    public static int srlDrawableArrowSize = 2130970343;
+    public static int srlDrawableMarginRight = 2130970344;
+    public static int srlDrawableProgress = 2130970345;
+    public static int srlDrawableProgressSize = 2130970346;
+    public static int srlDrawableSize = 2130970347;
+    public static int srlEnableLastTime = 2130970356;
+    public static int srlEnablePullToCloseTwoLevel = 2130970363;
+    public static int srlEnableRefresh = 2130970365;
+    public static int srlEnableTwoLevel = 2130970368;
+    public static int srlFinishDuration = 2130970369;
+    public static int srlFloorDuration = 2130970372;
+    public static int srlFloorRate = 2130970373;
+    public static int srlMaxRate = 2130970384;
+    public static int srlPrimaryColor = 2130970385;
+    public static int srlRefreshRate = 2130970387;
+    public static int srlTextFailed = 2130970389;
+    public static int srlTextFinish = 2130970390;
+    public static int srlTextLoading = 2130970391;
+    public static int srlTextNothing = 2130970392;
+    public static int srlTextPulling = 2130970393;
+    public static int srlTextRefreshing = 2130970394;
+    public static int srlTextRelease = 2130970395;
+    public static int srlTextSecondary = 2130970396;
+    public static int srlTextSizeTime = 2130970397;
+    public static int srlTextSizeTitle = 2130970398;
+    public static int srlTextTimeMarginTop = 2130970399;
+    public static int srlTextUpdate = 2130970400;
+
+    private R$attr() {
+    }
+}

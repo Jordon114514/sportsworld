@@ -1,0 +1,15 @@
+package com.zjwh.android_wh_physicalfitness.mvi;
+
+import android.media.MediaPlayer;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes7.dex */
+public final /* synthetic */ class OooOOOO implements MediaPlayer.OnSeekCompleteListener {
+
+    /* JADX INFO: renamed from: OooOO0o, reason: collision with root package name */
+    public final /* synthetic */ VideoPlayActivity f23467OooOO0o;
+
+    @Override // android.media.MediaPlayer.OnSeekCompleteListener
+    public final void onSeekComplete(MediaPlayer mediaPlayer) {
+        VideoPlayActivity.OoooO0O(this.f23467OooOO0o, mediaPlayer);
+    }
+}

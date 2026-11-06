@@ -1,0 +1,76 @@
+package com.geetest.gtc4;
+
+import java.io.IOException;
+
+/* JADX INFO: loaded from: D:\schoolrun\_rev\dex_final\classes4.dex */
+public final class d3 extends d0 {
+    public d3(boolean z, int i, f fVar) {
+        super(z, i, fVar);
+    }
+
+    @Override // com.geetest.gtc4.w
+    public final int a(boolean z) {
+        int i;
+        w wVarH = this.d.d().h();
+        boolean zI = i();
+        int iA = wVarH.a(zI);
+        if (zI) {
+            iA += u.a(iA);
+        }
+        if (z) {
+            int i2 = this.c;
+            if (i2 < 31) {
+                i = 1;
+            } else {
+                int i3 = 2;
+                while (true) {
+                    i2 >>>= 7;
+                    if (i2 == 0) {
+                        break;
+                    }
+                    i3++;
+                }
+                i = i3;
+            }
+        } else {
+            i = 0;
+        }
+        return iA + i;
+    }
+
+    @Override // com.geetest.gtc4.d0
+    public final z c(w wVar) {
+        return new z2(wVar);
+    }
+
+    @Override // com.geetest.gtc4.w
+    public final boolean f() {
+        return i() || this.d.d().h().f();
+    }
+
+    @Override // com.geetest.gtc4.d0, com.geetest.gtc4.w
+    public final w h() {
+        return this;
+    }
+
+    public d3(int i, int i2, int i3, f fVar) {
+        super(i, i2, i3, fVar);
+    }
+
+    @Override // com.geetest.gtc4.w
+    public final void a(u uVar, boolean z) throws IOException {
+        w wVarH = this.d.d().h();
+        boolean zI = i();
+        if (z) {
+            int i = this.b;
+            if (zI || wVarH.f()) {
+                i |= 32;
+            }
+            uVar.a(i, this.c);
+        }
+        if (zI) {
+            uVar.b(wVarH.a(true));
+        }
+        wVarH.a(uVar.b(), zI);
+    }
+}
