@@ -11,6 +11,7 @@
 ```
 src/      jadx 反编译源码（37,224 个 .java，67,333 个类）
 dex/      从加固载荷重建的可解析 DEX（8 个）
+flutter/  blutter 反编译的 Dart 层（1,103 库 / 4,496 类 / 15,436 函数）
 intel/    明文情报：字符串、类名、域名、API 路径
 docs/     分析报告
 ```
@@ -108,6 +109,32 @@ total += Math.min(Oooo(Math.min(counterDelta, 8), detectorDelta, min(accelDelta,
 ```
 
 意味着 hook 单一计步器返回值会被其余两路压制。
+
+### Flutter 层：加密在原生，不在 Dart
+
+`libapp.so` 经 blutter 反编译后，还原出 **182 个业务 Dart 文件**（带原始路径）。核心发现是请求加密链路：
+
+```
+CommonEncryptionInterceptor::onRequest
+  ├── encodeBody()          → 仅 jsonEncode，不加密
+  └── getInterceptorPreparedRequestSecurity()   [native_network_bridge.dart:940]
+        ↓ MethodChannel "prepared_security"
+      {op, domain, method, path, headers, bodyText, needEncryptBody}
+        ↓
+      libswsport.so → AES-128-CBC
+```
+
+```dart
+static String encodeBody(dynamic body) {
+  if (body == null) return "";
+  return jsonEncode(body);      // 只做 JSON 序列化
+}
+```
+
+两个 MethodChannel 方法：`get_bootstrap_config`（BootStrap 下发）、`prepared_security`（加密准备）。
+域名枚举 `run / discovery / dataCollection / activity / partner` 不含实际域名 —— 印证 baseUrl 由原生下发。
+
+详见 [`flutter/README.md`](flutter/README.md)。
 
 ### 服务器架构
 
