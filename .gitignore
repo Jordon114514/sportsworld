@@ -32,8 +32,9 @@ frida_dex/
 guest_dex/
 guest_raw/
 live_dex/
-dump/
-full/
+# 注意：只忽略仓库根目录的 dump/ 与 full/，不误伤 tools/dump/
+/dump/
+/full/
 
 # 临时文件
 *.log
