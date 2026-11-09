@@ -20,3 +20,24 @@ desktop.ini
 .idea/
 .vscode/
 *.iml
+
+# 大体积分析中间产物（不入库，可按 docs 方法复现）
+*.bin
+*.vdex
+*.odex
+*.apk
+mumu_base.vdex
+mdump/
+frida_dex/
+guest_dex/
+guest_raw/
+live_dex/
+dump/
+full/
+
+# 临时文件
+*.log
+*.tgz
+*.pcap
+*.pma
+

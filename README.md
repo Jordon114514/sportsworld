@@ -184,6 +184,8 @@ CNAME 指向 `*.eo.dnse2.com` = **腾讯云 EdgeOne**。生产源站 IP 被 CDN 
 
 有 code_item 的偏移全部合法，缺失的 37 个方法**在 DEX 里根本没有代码数据**。这是加固的定向选择——优先保护 UI 入口。
 
+**2026-11 补充验证**：用 root 免注入方式全量 dump 进程内存（379 个可读区 / 89.4 MB），确认业务 DEX **运行时也不在内存中**（`Lcom/zjwh/...` 描述符 0 处）。业务数据实际存在于 `base.vdex` 的隐藏区（68.16 MB，熵 5.0 左右，**未加密**，含 9145 个业务类描述符与 code_item 字节码），但 DEX 头与各 id 表已被剥除。详见 `docs/MuMu脱壳实验报告.md`。
+
 对照：**Flutter 页面 100% 完整**（易盾管不到 `libapp.so` 的 Dart AOT 快照）。
 
 ### 编译价值
@@ -215,7 +217,22 @@ CNAME 指向 `*.eo.dnse2.com` = **腾讯云 EdgeOne**。生产源站 IP 被 CDN 
 | `docs/libdeepknow反编译结果.md` | 反 hook 检测库（检测清单 + 加密方案） |
 | `docs/libdeepknow真机验证.md` | **真机确认该库从未加载** |
 | `docs/动态脱壳进展.md` | 运行时 dump 尝试与结论 |
+| `docs/MuMu脱壳实验报告.md` | **模拟器环境脱壳：frida 兼容性 + base.vdex 隐藏区结构** |
+| `docs/游客模式脱壳报告.md` | **游客模式绕开反调试、ART hook 不触发、.t 临时文件分析** |
 | `docs/GooglePlay审核评估.md` | 按 Play 政策逐条合规判定 |
+
+---
+
+## 工具脚本
+
+`tools/` 下归档了本次分析使用的全部脚本（共 183 个），按用途分目录：
+
+| 目录 | 数量 | 说明 |
+|---|---|---|
+| `tools/static/` | 120 | 静态分析：DEX 头部重建、map_list 解析、字符串恢复、源码完整度检查、反作弊逻辑提取 |
+| `tools/dump/` | 33 | 动态 dump：内存区域扫描、VDEX 解析、root 免注入 dump、设备端 shell 脚本 |
+| `tools/mumu/` | 26 | MuMu 模拟器实验：frida hook、反调试绕过、base.vdex 提取、游客模式 |
+| `tools/*.py` | 4 | Ghidra 脚本（native 库分析） |
 
 ---
 
